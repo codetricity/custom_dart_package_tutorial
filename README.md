@@ -1,4 +1,13 @@
-# RICOH API Introduction Tutorial - Building a Custom Dart Package
+# RICOH API Introduction Tutorial Series
+
+This is the code for a Flutter tutorial series on YouTube.
+
+The code for each tutorial is in a separate branch.
+
+* Lesson 1: Building a custom dart package
+* Lesson 2: Using provider for state management
+
+## Lesson 1: Building a Custom Dart Package
 
 ![screenshot](docs/screenshot.jpg)
 
@@ -18,3 +27,6 @@ Windows desktop
 flutter create --platforms=windows .
 flutter run
 ```
+
+## Lesson 2: Using Provider for State Management
+
