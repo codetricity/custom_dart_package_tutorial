@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'test_text.dart';
-import 'package:theta_connection/theta_connection.dart';
+import 'package:theta_api_intro_tutorial/gui_sections/response_window.dart';
+import 'button_window.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -9,47 +9,8 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Expanded(
-              flex: 2,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      var response = hello();
-                      print(response);
-                    },
-                    child: Text(
-                      'hello',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () async {
-                      var response = await testNetwork();
-                      print(response);
-                    },
-                    child: Text(
-                      'test network',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: double.infinity,
-                color: Colors.lightBlue[100],
-                child: SingleChildScrollView(
-                  child: Text(
-                    testText,
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ),
-              ),
-            )
+            ButtonWindow(),
+            ResponseWindow(),
           ],
         ),
       ),
