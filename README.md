@@ -4,18 +4,10 @@ This is the code for a Flutter tutorial series on YouTube.
 
 The code for each tutorial is in a separate branch.
 
-* Lesson 1: Building a custom dart package
+* Lesson 1: Building a custom dart package [video](https://youtu.be/nGkw3olDmpg) - Available May 17, 2021
 * Lesson 2: Using provider for state management
 
-## Lesson 1: Building a Custom Dart Package
-
-![screenshot](docs/screenshot.jpg)
-
-Code for tutorial on building a custom Dart package.
-
-The tutorial will be available on May 17, 2021.
-
-https://youtu.be/nGkw3olDmpg
+![branch selection](docs/images/branch_selection.png)
 
 ## To Run
 
@@ -28,5 +20,13 @@ flutter create --platforms=windows .
 flutter run
 ```
 
+## Lesson 1: Building a Custom Dart Package
+
+![lesson 1 screenshot](docs/images/lesson_1_screenshot.jpg)
+
+Code for tutorial on building a custom Dart package.
+
+
 ## Lesson 2: Using Provider for State Management
 
+![lesson 2 screenshot](docs/images/lesson_2_screenshot.png)
