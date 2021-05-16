@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 const Map emptyBody = {};
@@ -12,12 +14,15 @@ Future<String> request(Uri uri,
     if (method == 'get') {
       response = await http.get(uri);
     } else {
-      response = await http.post(uri, body: body);
+      response = await http.post(uri, body: jsonEncode(body));
     }
 
     var statusCode = response.statusCode;
     if (statusCode == 200) {
-      responseBody = Future<String>.value(response.body);
+      JsonEncoder encoder = JsonEncoder.withIndent('  ');
+
+      var responseJson = jsonDecode(response.body);
+      responseBody = Future<String>.value(encoder.convert(responseJson));
     } else {
       var errorString = 'network error';
       switch (statusCode) {
