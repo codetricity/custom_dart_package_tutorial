@@ -14,8 +14,14 @@ class CameraInfo extends StatelessWidget {
       RequestButton(
         apiRequest: info,
         label: 'info',
+        description: 'camera information, including firmware version',
       ),
-      RequestButton(apiRequest: state, label: 'state'),
+      RequestButton(
+        apiRequest: state,
+        label: 'state',
+        description:
+            'battery level, last picture taken, status of camera (check if camera is ready)',
+      ),
     ];
     return ButtonGroup(
         color: Colors.lightGreen[100],

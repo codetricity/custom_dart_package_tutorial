@@ -14,8 +14,13 @@ class NetworkTests extends StatelessWidget {
       RequestButton(
         apiRequest: jsonPlaceholder,
         label: 'JSON Placeholder',
+        description:
+            'fake data from Internet API using GET. Test of http API code.',
       ),
-      RequestButton(apiRequest: brokenPath, label: 'broken path'),
+      RequestButton(
+          apiRequest: brokenPath,
+          label: 'broken path',
+          description: 'broken URI to test error handling'),
     ];
     return ButtonGroup(
         color: Colors.grey[200],
