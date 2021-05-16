@@ -17,7 +17,7 @@ class ResponseWindow extends StatelessWidget {
         child: SingleChildScrollView(
           child: Text(
             context.watch<ResponseNotifier>().responseWindowText,
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 16),
           ),
         ),
       ),
