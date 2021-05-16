@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:theta_api_intro_tutorial/gui_components/request_button.dart';
-import 'package:theta_connection/theta_connection.dart';
+import '../gui_components/button_groups/network_tests.dart';
 
 class ButtonWindow extends StatelessWidget {
   const ButtonWindow({
@@ -11,14 +10,9 @@ class ButtonWindow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 2,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: ListView(
         children: [
-          RequestButton(
-            apiRequest: jsonPlaceholder,
-            label: 'JSON Placeholder',
-          ),
-          RequestButton(apiRequest: brokenPath, label: 'broken path'),
+          NetworkTests(),
         ],
       ),
     );

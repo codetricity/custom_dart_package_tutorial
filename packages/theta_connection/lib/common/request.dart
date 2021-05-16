@@ -1,6 +1,7 @@
 import 'package:http/http.dart' as http;
 
 const Map emptyBody = {};
+String domain = '192.168.1.1';
 
 Future<String> request(Uri uri,
     {String method = 'post', Map<dynamic, dynamic> body = emptyBody}) async {
