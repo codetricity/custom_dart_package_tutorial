@@ -11,8 +11,8 @@ class RequestButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () async {
+    return InkWell(
+      onTap: () async {
         var response = await apiRequest();
         context.read<ResponseNotifier>().updateResponseWindowText(response);
       },
