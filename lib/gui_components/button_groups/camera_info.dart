@@ -15,6 +15,7 @@ class CameraInfo extends StatelessWidget {
         apiRequest: info,
         label: 'info',
       ),
+      RequestButton(apiRequest: state, label: 'state'),
     ];
     return ButtonGroup(
         color: Colors.lightGreen[100],

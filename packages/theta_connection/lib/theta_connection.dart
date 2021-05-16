@@ -9,3 +9,4 @@ part 'network_tests/broken_path.dart';
 // protocols
 
 part 'protocols/info.dart';
+part 'protocols/state.dart';

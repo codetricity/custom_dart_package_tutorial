@@ -18,17 +18,27 @@ class ButtonGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: color,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            groupLabel,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-          ),
-          Column(
-            children: buttonList,
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Expanded(
+              flex: 2,
+              child: Text(
+                groupLabel,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: buttonList,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
