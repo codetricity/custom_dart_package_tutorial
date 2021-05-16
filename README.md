@@ -30,3 +30,8 @@ Code for tutorial on building a custom Dart package.
 ## Lesson 2: Using Provider for State Management
 
 ![lesson 2 screenshot](docs/images/lesson_2_screenshot.png)
+
+
+## todo
+
+* look into dio as an alternative to the http package https://pub.dev/packages/dio

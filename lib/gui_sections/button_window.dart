@@ -15,9 +15,10 @@ class ButtonWindow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           RequestButton(
-            apiRequest: testNetwork,
-            label: 'test network',
+            apiRequest: jsonPlaceholder,
+            label: 'JSON Placeholder',
           ),
+          RequestButton(apiRequest: brokenPath, label: 'broken path'),
         ],
       ),
     );

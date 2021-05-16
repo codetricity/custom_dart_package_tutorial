@@ -1,5 +1,6 @@
 library theta_connection;
 
-import 'package:http/http.dart' as http;
+import 'common/request.dart' as theta;
 
-part 'protocols/test_network.dart';
+part 'network_tests/json_placeholder.dart';
+part 'network_tests/broken_path.dart';
