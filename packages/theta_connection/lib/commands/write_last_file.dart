@@ -2,9 +2,14 @@ part of '../theta_connection.dart';
 
 Future<String> writeLastFile() async {
   String response = 'error writing file';
-  String imagePath =
-      'files/thetasc26c21a247d9055838792badc5/100RICOH/R0011956.JPG';
-  Uri uri = Uri.http(theta.domain, imagePath);
+  String lastFileUrl = await listUrlLast();
+  List lastFilePath = lastFileUrl.split('/');
+  String imageName = lastFilePath.last;
+  lastFilePath.removeRange(0, 3);
+  var thetaImagePath = lastFilePath.join('/');
+  print(imageName);
+
+  Uri uri = Uri.http(theta.domain, thetaImagePath);
 
   try {
     print('starting image download');
@@ -15,9 +20,8 @@ Future<String> writeLastFile() async {
 
     // create file theta_images folder if it does not exist
 
-    var thetaImage =
-        await File(join(picturesPath, 'theta_images', 'theta_test.jpg'))
-            .create(recursive: true);
+    var thetaImage = await File(join(picturesPath, 'theta_images', imageName))
+        .create(recursive: true);
 
     await thetaImage.writeAsBytes(imageData.bodyBytes);
 
