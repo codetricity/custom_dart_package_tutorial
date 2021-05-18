@@ -10,3 +10,9 @@ part 'network_tests/broken_path.dart';
 
 part 'protocols/info.dart';
 part 'protocols/state.dart';
+
+// commands
+part 'commands/take_picture.dart';
+
+// options
+part 'setOptions/disable_hdr.dart';

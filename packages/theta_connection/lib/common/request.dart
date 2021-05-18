@@ -2,8 +2,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+// the body needs to be encoded as JSON
 const Map emptyBody = {};
 String domain = '192.168.1.1';
+// http package accepts a Map for the headers
+var headers = {'Content-Type': 'application/json;charset=utf-8'};
 
 Future<String> request(Uri uri,
     {String method = 'post', Map<dynamic, dynamic> body = emptyBody}) async {
@@ -14,7 +17,7 @@ Future<String> request(Uri uri,
     if (method == 'get') {
       response = await http.get(uri);
     } else {
-      response = await http.post(uri, body: jsonEncode(body));
+      response = await http.post(uri, headers: headers, body: jsonEncode(body));
     }
 
     var statusCode = response.statusCode;
