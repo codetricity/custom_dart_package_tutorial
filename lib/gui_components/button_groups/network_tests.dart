@@ -25,6 +25,6 @@ class NetworkTests extends StatelessWidget {
     return ButtonGroup(
         color: Colors.grey[200],
         buttonList: buttonList,
-        groupLabel: 'network tests');
+        groupLabel: 'Network Tests');
   }
 }

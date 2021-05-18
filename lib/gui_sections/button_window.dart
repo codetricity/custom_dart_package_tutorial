@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:theta_api_intro_tutorial/gui_components/button_groups/camera_info.dart';
+import 'package:theta_api_intro_tutorial/gui_components/button_groups/files_group.dart';
 import 'package:theta_api_intro_tutorial/gui_components/button_groups/set_options_group.dart';
 import 'package:theta_api_intro_tutorial/gui_components/button_groups/shutter_button_group.dart';
 import 'package:theta_api_intro_tutorial/gui_components/button_groups/system_group.dart';
@@ -29,10 +30,11 @@ class ButtonWindow extends StatelessWidget {
       child: ListView(
         children: [
           ShutterButtonGroup(),
-          NetworkTests(),
+          FilesGroup(),
           CameraInfo(),
           SystemGroup(),
           SetOptionsGroup(),
+          NetworkTests(),
         ],
       ),
     );

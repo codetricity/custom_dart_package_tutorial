@@ -26,6 +26,6 @@ class CameraInfo extends StatelessWidget {
     return ButtonGroup(
         color: Colors.lightGreen[100],
         buttonList: buttonList,
-        groupLabel: 'camera info');
+        groupLabel: 'Camera Info');
   }
 }
