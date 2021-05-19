@@ -2,6 +2,8 @@ library theta_connection;
 
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:theta_connection/commands/get_pictures_path.dart';
 
@@ -26,6 +28,7 @@ part 'commands/list_files_fifty.dart';
 part 'commands/list_url_last.dart';
 part 'commands/write_file_fifty.dart';
 part 'commands/write_last_file.dart';
+part 'commands/get_thumb_fifty.dart';
 
 // options
 part 'setOptions/disable_hdr.dart';
