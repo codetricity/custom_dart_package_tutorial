@@ -27,9 +27,9 @@ class FilesGroup extends StatelessWidget {
         description: 'list the uri of the last file on the camera ',
       ),
       RequestButton(
-        apiRequest: listUrlFifty,
-        label: 'Fifty URIs',
-        description: 'list 50 image URIs from the camera ',
+        apiRequest: writeFileFifty,
+        label: 'Write 50 files',
+        description: 'Write 50 images  from the camera ',
       ),
       RequestButton(
         apiRequest: writeLastFile,

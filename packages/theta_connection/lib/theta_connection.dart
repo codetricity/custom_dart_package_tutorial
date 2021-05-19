@@ -24,7 +24,7 @@ part 'commands/take_picture.dart';
 part 'commands/list_files_last.dart';
 part 'commands/list_files_fifty.dart';
 part 'commands/list_url_last.dart';
-part 'commands/list_url_fifty.dart';
+part 'commands/write_file_fifty.dart';
 part 'commands/write_last_file.dart';
 
 // options
