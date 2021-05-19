@@ -12,17 +12,19 @@ Future<List<Uint8List>> getThumbFifty() async {
 
   List<Uint8List> thumbByteList = [];
 
+  var client = http.Client();
+
   for (String url in urlList) {
     url = url + 'type=thumb';
     Uri uri = Uri.parse(url);
     try {
-      final imageData = await http.get(uri);
+      final imageData = await client.get(uri);
       thumbByteList.add(imageData.bodyBytes);
     } catch (error) {
       print(error);
       break;
     }
   }
-
+  client.close();
   return thumbByteList;
 }

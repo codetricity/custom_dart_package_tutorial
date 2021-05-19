@@ -12,10 +12,20 @@ class ThumbScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.lightGreen[100],
       ),
-      body: ListView.builder(
+      body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 300,
+              childAspectRatio: 2,
+              crossAxisSpacing: 3,
+              mainAxisSpacing: 3),
           itemCount: thumbList.length,
           itemBuilder: (context, index) {
-            return Image.memory(thumbList[index]);
+            return Container(
+              height: 180,
+              child: Image.memory(
+                thumbList[index],
+              ),
+            );
           }),
     );
   }
